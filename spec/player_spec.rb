@@ -4,7 +4,7 @@ require './lib/player'
 RSpec.describe Player do
   it 'exists' do
     player = Player.new("Michael Palledorous" , 1000000, 36)
-
+require 'pry'; binding.pry
     expect(player).to be_a Player
   end
 
