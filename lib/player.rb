@@ -1,10 +1,11 @@
 class Player
-  attr_reader :name, :cost, :contract
+  attr_reader :name, :cost, :contract, :nick_name
 
-  def initialize (name, cost, contract)
+  def initialize (name, cost, contract, nick_name = nil)
     @name = name
     @cost = cost
     @contract = contract
+    @nick_name = nick_name
   end
 
   def first_name
@@ -27,6 +28,14 @@ class Player
 
   def total_cost
     cost * contract
+  end
+
+  def nickname
+    nick_name
+  end
+
+  def set_nickname(name)
+    @nick_name = name
   end
 
 end
